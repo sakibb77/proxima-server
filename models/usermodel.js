@@ -38,7 +38,7 @@ const passRequirementsMessage = () => {
 
 userSchema.statics.signup = async function (email, password) {
   //validation
-  if (!email && !password) {
+  if (!email || !password) {
     throw Error("All Fields Must Be Filled");
   }
 
@@ -70,7 +70,7 @@ userSchema.statics.signup = async function (email, password) {
 
 userSchema.statics.login = async function (email, password) {
   //validation
-  if (!email && !password) {
+  if (!email || !password) {
     throw Error("All Fields Must Be Filled");
   }
 

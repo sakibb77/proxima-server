@@ -1,4 +1,5 @@
 const express = require("express");
+const requireAuth = require("../middlewares/requireAuth");
 const {
   postProject,
   getAllProjects,
@@ -9,6 +10,8 @@ const {
 
 //router
 const router = express.Router();
+
+router.use(requireAuth);
 
 //get all projects
 router.get("/", getAllProjects);

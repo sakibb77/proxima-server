@@ -9,7 +9,7 @@ const userRoute = require("./routes/userRoute");
 const app = express();
 
 //port
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 7000;
 
 //middlewares
 app.use(cors());
